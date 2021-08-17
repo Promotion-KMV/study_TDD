@@ -1,5 +1,7 @@
 db.sqlite3
-*.log
+geckodriver.exe
+geckodriver.log
 *.exe
+*.log
 *.pyc
 /venv
