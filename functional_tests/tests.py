@@ -1,16 +1,17 @@
 # import selenium
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
+from django.test import LiveServerTestCase
 import time
 import unittest
 
 
-class NewVisitorTest(unittest.TestCase):
+class NewVisitorTest(LiveServerTestCase):
     def setUp(self):
         print('start')
         self.browser = webdriver.Firefox()
         # self.browser = webdriver.Firefox(executable_path="/home/vlad/study_Django/study_TDD/geckodriver")
-        self.browser.get('http://localhost:8000')
+        self.browser.get(self.live_server_url)
 
     def tearDown(self):
         print('finish')
