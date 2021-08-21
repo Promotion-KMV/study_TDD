@@ -2,6 +2,7 @@ db.sqlite3
 geckodriver.exe
 geckodriver.log
 geckodriver
+/__pycache__
 *.exe
 *.log
 *.pyc
