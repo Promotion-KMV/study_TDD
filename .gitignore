@@ -6,4 +6,5 @@ geckodriver
 *.exe
 *.log
 *.pyc
+.idea/
 /venv

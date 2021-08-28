@@ -13,8 +13,8 @@ class NewVisitorTest(LiveServerTestCase):
 
     def setUp(self):
         print('start')
-        self.browser = webdriver.Firefox()
-        # self.browser = webdriver.Firefox(executable_path="/home/vlad/study_Django/study_TDD/geckodriver")
+        # self.browser = webdriver.Firefox()
+        self.browser = webdriver.Firefox(executable_path="/home/vlad/study_Django/study_TDD/geckodriver")
         self.browser.get(self.live_server_url)
 
     def tearDown(self):
@@ -57,7 +57,7 @@ class NewVisitorTest(LiveServerTestCase):
         self.assertRegex(edit_list_url, '/lists/.+')
 
         self.browser.quit()
-        self.browser = webdriver.Firefox()
+        self.browser = webdriver.Firefox(executable_path="/home/vlad/study_Django/study_TDD/geckodriver")
         self.browser.get(self.live_server_url)
         page_text = self.browser.find_element_by_tag_name('body').text
         self.assertNotIn('Купть павлиньи перья', page_text)
