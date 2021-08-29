@@ -8,3 +8,4 @@ geckodriver
 *.pyc
 .idea/
 /venv
+/migrations
